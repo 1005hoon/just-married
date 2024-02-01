@@ -6,6 +6,7 @@ import Image from "next/image"
 import Lightbox, {
   isImageFitCover,
   isImageSlide,
+  LightboxProps,
   useLightboxProps,
   useLightboxState,
 } from "yet-another-react-lightbox"
@@ -39,6 +40,51 @@ import image24 from "@/public/images/gallery-24.png"
 import image25 from "@/public/images/gallery-25.png"
 import image26 from "@/public/images/gallery-26.png"
 import image27 from "@/public/images/gallery-27.png"
+
+function isNextJsImage(slide) {
+  return isImageSlide(slide) && typeof slide.width === "number" && typeof slide.height === "number"
+}
+
+export default function NextJsImage({ slide, offset, rect }) {
+  const {
+    on: { click },
+    carousel: { imageFit },
+  } = useLightboxProps()
+
+  const { currentIndex } = useLightboxState()
+
+  const cover = isImageSlide(slide) && isImageFitCover(slide, imageFit)
+
+  if (!isNextJsImage(slide)) return undefined
+
+  const width = !cover
+    ? Math.round(Math.min(rect.width, (rect.height / slide.height) * slide.width))
+    : rect.width
+
+  const height = !cover
+    ? Math.round(Math.min(rect.height, (rect.width / slide.width) * slide.height))
+    : rect.height
+
+  return (
+    <div style={{ position: "relative", width, height }}>
+      <Image
+        fill
+        alt=""
+        src={slide}
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        priority
+        loading="eager"
+        quality={100}
+        draggable={false}
+        placeholder={slide.blurDataURL ? "blur" : undefined}
+        style={{
+          cursor: click ? "pointer" : undefined,
+        }}
+        onClick={offset === 0 ? () => click?.({ index: currentIndex }) : undefined}
+      />
+    </div>
+  )
+}
 
 interface LightBoxProps {
   index: number
@@ -85,6 +131,7 @@ export function LightBox(props: LightBoxProps) {
         image26,
         image27,
       ]}
+      render={{ slide: NextJsImage }}
     />
   )
 }
