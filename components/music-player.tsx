@@ -30,5 +30,5 @@ export function MusicPlayer(props: MusicPlayerProps) {
     }
   }, [isPlaying])
 
-  return <audio ref={audioRef} loop src="https://cdn2.makedear.com/bgms/X9b4yqbh3v.mp3" playsInline></audio>
+  return <audio ref={audioRef} loop src="/musics/bgm.mp3" playsInline></audio>
 }

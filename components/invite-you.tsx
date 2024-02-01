@@ -12,11 +12,11 @@ export function InviteYou(props: InviteYouProps) {
     <section className="relative mt-14 overflow-hidden">
       <div className="absolute -z-10 h-[1200px] w-[550px] -translate-x-[50px] bg-invite-you bg-contain bg-top bg-no-repeat"></div>
       <div className="mt-32 flex flex-col items-center bg-[#F6F4F4] px-5 pb-10">
-        <FadeIn className="flex flex-col items-center gap-2">
+        <FadeIn delay={0.1} className="flex flex-col items-center gap-2">
           <h2 className="text-sm font-light uppercase text-slate-500">Invite You</h2>
           <h2 className="text-xl font-bold">소중한 분들을 초대합니다</h2>
         </FadeIn>
-        <FadeIn className="mt-12 flex flex-col gap-5 text-center">
+        <FadeIn delay={0.15} className="mt-12 flex flex-col gap-5 text-center">
           <p className="text-sm leading-relaxed tracking-wider">
             같은 생각, 같은 마음으로 <br />
             지혜롭게 살겠습니다.
@@ -37,7 +37,7 @@ export function InviteYou(props: InviteYouProps) {
           </p>
           <p className="text-sm leading-relaxed tracking-wider">더 없는 기쁨으로 간직하겠습니다.</p>
         </FadeIn>
-        <FadeIn className="mt-14 flex w-full items-center justify-around gap-2">
+        <FadeIn delay={0.2} className="mt-14 flex w-full items-center justify-around gap-2">
           <div className="relative w-full max-w-[140px] pt-[170px]">
             <Image
               className="rounded"
@@ -58,7 +58,7 @@ export function InviteYou(props: InviteYouProps) {
             />
           </div>
         </FadeIn>
-        <FadeIn className="mt-14 w-full max-w-[260px] border-b border-t py-3 text-center">
+        <FadeIn delay={0.25} className="mt-14 w-full max-w-[260px] border-b border-t py-3 text-center">
           <p className="text-sm leading-relaxed">
             <span className="font-semibold">이화영</span>&nbsp;·&nbsp;
             <span className="font-semibold">배정희</span> 의&nbsp;&nbsp;장남{" "}

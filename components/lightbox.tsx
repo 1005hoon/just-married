@@ -1,12 +1,10 @@
 // @ts-nocheck
-"use client"
 
 import Image from "next/image"
 
 import Lightbox, {
   isImageFitCover,
   isImageSlide,
-  LightboxProps,
   useLightboxProps,
   useLightboxState,
 } from "yet-another-react-lightbox"

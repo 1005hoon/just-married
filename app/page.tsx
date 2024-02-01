@@ -1,8 +1,4 @@
-import { Account } from "@/components/account"
-import { Calendar } from "@/components/calander"
 import { Gallery } from "@/components/gallery"
-import { GuestLog } from "@/components/guest-log"
-import { ImageGallery } from "@/components/image-gallery"
 import { Invitation } from "@/components/invitation"
 import { InviteLog } from "@/components/invite-log"
 import { InviteMoney } from "@/components/invite-money"

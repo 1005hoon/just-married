@@ -17,7 +17,7 @@ export function Invitation(props: InvitationProps) {
           <p>소연</p>
         </div>
       </FadeIn>
-      <FadeIn className="relative mx-auto mt-5 w-full max-w-[320px] pt-[453px]">
+      <FadeIn delay={0.2} className="relative mx-auto mt-5 w-full max-w-[320px] pt-[453px]">
         <Image
           priority
           src="/images/main-photo.png"
@@ -26,7 +26,7 @@ export function Invitation(props: InvitationProps) {
           alt="재림 소연 결혼식에 초대합니다"
         />
       </FadeIn>
-      <FadeIn delay={0.2}>
+      <FadeIn delay={0.3}>
         <div className="mt-7 flex flex-col items-center gap-2">
           <p className="text-sm font-medium tracking-tight text-foreground">
             2024. 03. 09 토요일 오후 1시 30분

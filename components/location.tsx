@@ -41,11 +41,11 @@ export function Location(props: LocationProps) {
 
   return (
     <section className="mt-20 flex flex-col items-center px-5">
-      <FadeIn className="flex flex-col items-center gap-2">
+      <FadeIn delay={0.1} className="flex flex-col items-center gap-2">
         <h2 className="text-sm font-light uppercase text-slate-500">Location</h2>
         <h2 className="text-xl font-bold">오시는 길</h2>
       </FadeIn>
-      <FadeIn className="mt-8 flex w-full flex-col items-center gap-2">
+      <FadeIn delay={0.15} className="mt-8 flex w-full flex-col items-center gap-2">
         <p className="text-sm">WI컨벤션</p>
         <p onClick={onClick} className="text-sm tracking-tighter text-stone-600 underline underline-offset-2">
           경기도 수원시 팔달구 월드컵로 310 (우만동 209)
@@ -55,7 +55,7 @@ export function Location(props: LocationProps) {
       <div className="mt-6 flex h-[300px] w-full">
         <NaverMap />
       </div>
-      <FadeIn className="mt-2 flex w-full justify-between font-gowunDodum">
+      <FadeIn delay={0.2} className="mt-2 flex w-full justify-between font-gowunDodum">
         <button
           onClick={onNaverClick}
           className="flex flex-1 items-center justify-center gap-1 rounded-bl-md rounded-tl-md border px-2 py-3 text-sm font-medium text-slate-700"
@@ -88,7 +88,7 @@ export function Location(props: LocationProps) {
       </FadeIn>
 
       <div className="mt-8 flex w-full flex-col gap-6 text-sm leading-relaxed text-[#676666]">
-        <div className="space-y-2">
+        <FadeIn delay={0.1} className="space-y-2">
           <div className="flex items-center gap-2 border-b py-2">
             <img className="h-7 w-7" src="images/bus-icon.png" alt="bus icon" />
             <p className="text-lg font-medium">버스</p>
@@ -122,8 +122,8 @@ export function Location(props: LocationProps) {
             <p className="text-base font-semibold">셔틀버스</p>
             <p>수원시청역(수인분당선) 9번출구 - 정시기준 약 20분간격</p>
           </div>
-        </div>
-        <div className="space-y-2">
+        </FadeIn>
+        <FadeIn delay={0.2} className="space-y-2">
           <div className="flex items-center gap-2 border-b py-2">
             <img className="h-7 w-7" src="images/car-icon.png" alt="car icon" />
             <p className="text-lg font-medium">자가용</p>
@@ -136,7 +136,7 @@ export function Location(props: LocationProps) {
             <p className="text-xs font-semibold">* 무료주차 2시간</p>
             <p className="text-xs">P6 주차장은 혼주전용입니다.</p>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   )
