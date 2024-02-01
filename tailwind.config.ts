@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         notoSerif: ["var(--noto_serif_kr)"],
+        gowunDodum: ["var(--gowun_dodum)"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -74,6 +75,9 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        "invite-you": "url('/images/invite-you-screen.png')",
       },
     },
   },
