@@ -78,6 +78,7 @@ const config = {
       },
       backgroundImage: {
         "invite-you": "url('/images/invite-you-screen.png')",
+        "guest-log": "url('/images/guest-log-screen.png')",
       },
     },
   },

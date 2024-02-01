@@ -16,7 +16,13 @@ export function Contact(props: ContactProps) {
       <div className="flex h-full w-full items-center justify-between px-4 pb-5">
         <div className="flex flex-col items-center gap-4">
           <div className="relative w-28 pt-28">
-            <Image className="rounded-full object-cover" src="/images/contact-1.png" fill alt="" />
+            <Image
+              className="rounded-full object-cover"
+              src="/images/contact-1.png"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fill
+              alt=""
+            />
           </div>
           <div className="flex flex-col items-center gap-1">
             <p className="text-center text-sm text-[#3F3838]">신랑 이재림</p>
@@ -28,7 +34,13 @@ export function Contact(props: ContactProps) {
         </div>
         <div className="flex flex-col items-center gap-4">
           <div className="relative w-28 pt-28">
-            <Image className="rounded-full object-cover" src="/images/contact-2.png" fill alt="" />
+            <Image
+              className="rounded-full object-cover"
+              src="/images/contact-2.png"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fill
+              alt=""
+            />
           </div>
           <div className="flex flex-col items-center gap-1">
             <p className="text-center text-sm text-[#3F3838]">신부 김소연</p>

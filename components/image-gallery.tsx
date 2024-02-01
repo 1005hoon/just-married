@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 
+import { FadeIn } from "./fade-in"
 import { LightBox } from "./lightbox"
 
 interface ImageGalleryProps {}
@@ -21,7 +22,6 @@ export function ImageGallery(props: ImageGalleryProps) {
   const onClick = (i: number) => {
     setOpen(true)
     setIndex(i)
-    console.log(i)
   }
 
   useEffect(() => {
@@ -49,17 +49,21 @@ export function ImageGallery(props: ImageGalleryProps) {
                   const itemNumber = index + 1 + page * 9
 
                   return (
-                    <div className="relative h-[140px] w-full rounded shadow-lg" key={index}>
+                    <FadeIn
+                      delay={0.05 * itemNumber}
+                      className="relative h-[140px] w-full rounded shadow-lg"
+                      key={index}
+                    >
                       <Image
                         onClick={() => onClick(itemNumber)}
                         alt="갤러리 이미지"
                         className="rounded object-cover shadow-inner"
-                        src={`/images/gallery-${itemNumber}.jpg`}
+                        src={`/images/gallery-${itemNumber}.png`}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         priority
                       />
-                    </div>
+                    </FadeIn>
                   )
                 })}
               </CarouselItem>
