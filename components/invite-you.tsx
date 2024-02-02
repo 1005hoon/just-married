@@ -60,7 +60,7 @@ export function InviteYou(props: InviteYouProps) {
         </FadeIn>
         <FadeIn delay={0.25} className="mt-14 w-full max-w-[260px] border-b border-t py-3 text-center">
           <p className="text-sm leading-relaxed">
-            <span className="font-semibold">이화영</span>&nbsp;·&nbsp;
+            <span className="font-semibold">이화형</span>&nbsp;·&nbsp;
             <span className="font-semibold">배정희</span> 의&nbsp;&nbsp;장남{" "}
             <span className="font-semibold">재림</span>
           </p>
