@@ -30,7 +30,7 @@ const gowunDodum = Gowun_Dodum({
 })
 
 export const metadata: Metadata = {
-  title: "이재림 ❤️ 김소연 결혼합니다",
+  title: "재림 ❤️ 소연 결혼합니다",
   description: "따뜻한 봄의 시작을 알리는 3월, 재림과 소연의 결혼식으로 초대합니다.",
   openGraph: {
     type: "website",
