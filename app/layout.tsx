@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    images: "/og.jpg",
+    images: "/og.png",
     url: "https://just-married.app",
     title: "재림 ❤️ 소연 결혼합니다",
     description: "따뜻한 봄의 시작을 알리는 3월, 재림과 소연의 결혼식으로 초대합니다.",
