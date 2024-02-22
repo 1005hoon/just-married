@@ -58,7 +58,8 @@ export function ImageGallery(props: ImageGalleryProps) {
                         onClick={() => onClick(itemNumber)}
                         alt="갤러리 이미지"
                         className="rounded object-cover shadow-inner"
-                        src={`/images/gallery-${itemNumber}.png`}
+                        src={`/images/gallery-${itemNumber}.jpg`}
+                        quality={80}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         priority
