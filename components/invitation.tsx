@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+import inviteImg from "@/public/images/main-photo.png"
+
 import { FadeIn } from "./fade-in"
 
 interface InvitationProps {}

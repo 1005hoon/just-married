@@ -16,7 +16,7 @@ export function MusicPlayer(props: MusicPlayerProps) {
 
       if (!isPlaying) {
         audioRef.current.play()
-        setIsPlaying(true)
+        setIsPlaying(() => true)
         // Remove event listener after playing
         window.removeEventListener("scroll", startAudio)
       }

@@ -53,6 +53,7 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
 }
+
 export default function RootLayout({
   children,
 }: Readonly<{
