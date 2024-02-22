@@ -72,7 +72,7 @@ export default function NextJsImage({ slide, offset, rect }) {
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         priority
         loading="eager"
-        quality={100}
+        quality={85}
         draggable={false}
         placeholder={slide.blurDataURL ? "blur" : undefined}
         style={{
