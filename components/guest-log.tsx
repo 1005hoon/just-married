@@ -2,13 +2,6 @@
 
 import { useEffect, useState } from "react"
 
-import { createClient } from "@supabase/supabase-js"
-
-const supabaseUrl = "https://vfqdotxzupwqllmkbhkf.supabase.co"
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZmcWRvdHh6dXB3cWxsbWtiaGtmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDY3ODc4NzEsImV4cCI6MjAyMjM2Mzg3MX0.JOpZnDb1Fl5iIaPi-FgHc110ko73Oc9NoUp8z61J7xA"
-const supabase = createClient(supabaseUrl, supabaseKey)
-
 interface GuestLogProps {}
 
 interface Log {
@@ -27,29 +20,20 @@ export function GuestLog(props: GuestLogProps) {
     e.preventDefault()
     setLoading(true)
 
-    const { data, error } = await supabase.from("logs").upsert([log]).select()
+    const response = await fetch("/api/logs", { method: "POST", body: JSON.stringify(log) })
+    const { data } = await response.json()
 
-    if (error) {
-      return alert("방명록이 전송되지 않았어요!")
-    }
-
-    setLogs((prev) => [data[0], ...prev])
+    setLogs(() => [...data])
     setLog({ name: "", content: "" })
     setLoading(false)
   }
 
   useEffect(() => {
     async function fetchLogs() {
-      const { data, error } = await supabase
-        .from("logs")
-        .select("*")
-        .order("created_at", { ascending: false })
+      const response = await fetch("/logs.json")
+      const data = await response.json()
 
-      if (error) {
-        console.error(error)
-      } else {
-        setLogs(data)
-      }
+      setLogs(data)
     }
 
     fetchLogs()
